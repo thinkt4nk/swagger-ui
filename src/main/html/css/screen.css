@@ -1757,3 +1757,29 @@ pre code {
 .message-fail {
   color: #cc0000;
 }
+ul.ui-tabs:before,
+ul.ui-tabs:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+ul.ui-tabs:after {
+  clear: both;
+}
+ul.ui-tabs {
+    *zoom: 1;
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+ul.ui-tabs li {
+    display: block;
+    float: left;
+    min-width: 80px;
+    min-height: 20px;
+    line-height: 20px;
+    padding: 8px;
+    text-align: center;
+    background-color: #bcddf7;
+    margin-left: 6px;
+    cursor: pointer;
+}

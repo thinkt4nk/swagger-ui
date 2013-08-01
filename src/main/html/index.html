@@ -19,8 +19,8 @@
     <script type="text/javascript">
 	$(function () {
 	    window.swaggerUi = new SwaggerUi({
-                discoveryUrl:"http://petstore.swagger.wordnik.com/api/api-docs.json",
-                apiKey:"special-key",
+                discoveryUrl:"http://api.bonfyreapp.com/meta/documentation?resource=/chats",
+                apiKey:"keyboard cat",
                 dom_id:"swagger-ui-container",
                 supportHeaderParams: false,
                 supportedSubmitMethods: ['get', 'post', 'put'],
@@ -52,6 +52,7 @@
     <div class="swagger-ui-wrap">
         <a id="logo" href="http://swagger.wordnik.com">swagger</a>
 
+        <!--
         <form id='api_selector'>
             <div class='input icon-btn'>
                 <img id="show-pet-store-icon" src="images/pet_store_api.png" title="Show Swagger Petstore Example Apis">
@@ -64,6 +65,7 @@
             <div class='input'><input placeholder="api_key" id="input_apiKey" name="apiKey" type="text"/></div>
             <div class='input'><a id="explore" href="#">Explore</a></div>
         </form>
+        -->
     </div>
 </div>
 
@@ -71,6 +73,10 @@
     &nbsp;
 </div>
 
+<ul class="ui-tabs swagger-ui-wrap">
+    <li class="resource-selector" data-url="http://api.bonfyreapp.com/meta/documentation?resource=/chats">Chat</li>
+    <li class="resource-selector" data-url="http://api.bonfyreapp.com/meta/documentation?resource=/user">Users</li>
+</ul>
 <div id="swagger-ui-container" class="swagger-ui-wrap">
 
 </div>

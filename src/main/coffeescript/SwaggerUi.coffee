@@ -48,6 +48,7 @@ class SwaggerUi extends Backbone.Router
   # This is bound to success handler for SwaggerApi
   #  so it gets called when SwaggerApi completes loading
   render:() ->
+    $('li.resource-selector').on 'click', @showCustom
     @showMessage('Finished Loading Resource Information. Rendering Swagger UI...')
     @mainView = new MainView({model: @api, el: $('#' + @dom_id)}).render()
     @showMessage()
@@ -74,5 +75,10 @@ class SwaggerUi extends Backbone.Router
     val = $('#message-bar').html data
     @options.onFailure(data) if @options.onFailure?
     val
+
+  showCustom: (e) =>
+    e?.preventDefault()
+    url = $(e.currentTarget).data 'url'
+    @updateSwaggerUi {discoveryUrl: url, apiKey: $('#input_apiKey').val()}
 
 window.SwaggerUi = SwaggerUi
